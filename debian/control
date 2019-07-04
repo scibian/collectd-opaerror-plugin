@@ -1,0 +1,19 @@
+Source: collectd-opaerror-plugin
+Priority: extra
+Maintainer: Scibian Project <packaging@scibian.org>
+Section: admin
+Build-Depends:
+ debhelper (>= 9),
+Standards-Version: 3.9.6
+Vcs-Browser: https://github.com/scibian/collectd-opaerror-plugin
+Vcs-Git: https://github.com/scibian/collectd-opaerror-plugin.git
+
+Package: collectd-opaerror-plugin
+Architecture: all
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ collectd,
+Description: Collectd python plugin that collects all OPA error counters...
+ This package provide a Python script that can be used as a Collectd plugin to
+ collect metrics on all OPA ports on infiniband fabric.
