@@ -39,6 +39,27 @@ your `collectd.conf`:
 
 Make sure to adjust the `ModulePath` value.
 
+## Description
+
+See bellow description of thresolds collected by this plugin:
+
+Errors: Signal Integrity
+    Link Qual Indicator                      LinkQualityIndicator
+    Uncorrectable Errors                     UncorrectableErrors
+    Link Downed                              LinkDowned
+    Rcv Errors                               RcvErrors
+    Exc. Buffer Overrun                      ExcessiveBufferOverruns
+    FM Config Errors                         FMConfigErrors
+    Local Link Integ Err                     LocalLinkIntegrityErrors
+    Link Error Recovery                      LinkErrorRecovery
+    Rcv Rmt Phys Err                         RcvRemotePhysicalErrors
+Errors: Security
+    Xmit Constraint                          XmitConstraintErrors
+    Rcv Constraint                           RcvConstraintErrors
+Errors: Routing and Other Errors
+    Rcv Sw Relay Err                         RcvSwitchRelayErrors
+    Xmit Discards                            XmitDiscards
+
 ## Licensing
 
 This script is distributed under the terms of the GNU General Public License
