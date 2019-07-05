@@ -1,3 +1,12 @@
+collectd-opaerror-plugin (0.2-0sci8u1) scibian8; urgency=medium
+
+  [ Kwame AMEDODJI ]
+  * Release 0.1-0sci8u3
+
+  [ Kwame Amedodji ]
+
+ -- Kwame Amedodji <kwame-externe.amedodji@edf.fr>  Fri, 05 Jul 2019 10:54:16 +0200
+
 collectd-opaerror-plugin (0.1-0sci8u3) scibian8; urgency=medium
 
   [ Kwame AMEDODJI ]
