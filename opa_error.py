@@ -55,7 +55,7 @@ def run(cmd, exit_on_error=True):
             stdout = subprocess.PIPE, stderr = subprocess.PIPE)
         output, error = popen.communicate()
         return popen.returncode, output.rstrip(), error
-    except OSError, e:
+    except OSError as e:
         return 1, "", e.errno
 
 def opaextracterror():
@@ -64,6 +64,7 @@ def opaextracterror():
     cmd = '/usr/sbin/opareport -o comps -s -x -d 10 -M | /usr/sbin/opaxmlextract -d \; -e NodeDesc -e SystemImageGUID -e PortNum -e LinkSpeedActive -e LinkWidthDnGradeTxActive -e LinkWidthDnGradeRxActive -e LinkQualityIndicator -e RcvSwitchRelayErrors -e LocalLinkIntegrityErrors -e RcvErrors -e ExcessiveBufferOverruns -e FMConfigErrors -e LinkErrorRecovery -e LinkDowned -e UncorrectableErrors -e RcvConstraintErrors -e XmitConstraintErrors -e XmitDiscards -e RcvRemotePhysicalErrors -s Neighbor -s SMs'
     retcode, output, error = run(cmd)
 
+    output = output.decode('utf-8')
     output = output.split('\n')
     for index in range(len(output)):
         if index:
@@ -72,14 +73,14 @@ def opaextracterror():
             SystemImageGUID = line[1]
             PortNum = line[2]
             row = '{0}_{1}'.format(NodeDesc,PortNum)
-    	    for col in range(4,len(line)):
-				if line[col] == 'None' or line[col] == '':
-					metric[header[col]][row] = 'None'
-				else:
-					metric[header[col]][row] =  int(line[col])
+            for col in range(4,len(line)):
+                if line[col] == 'None' or line[col] == '':
+                    metric[header[col]][row] = 'None'
+                else:
+                    metric[header[col]][row] =  int(line[col])
         else:
             header = re.split(';',output[index])
-    	    for col in range(4,len(header)):
+            for col in range(4,len(header)):
                 metric[header[col]] = {}
 
     return metric
@@ -96,7 +97,7 @@ def print_metrics(debug):
                 msg = 'no counter {0} for {1}'.format(instance,key)
                 logging.debug(msg)
             else:
-                print '{0}_{1} {2}'.format(instance,key,row[key])
+                print('{0}_{1} {2}'.format(instance, key, row[key]))
 
 def config(config):
 	for kv in config.children:
