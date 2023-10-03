@@ -1,0 +1,26 @@
+collectd-opaerror-plugin (0.2-0sci9u1) scibian9; urgency=medium
+
+  [ Kwame AMEDODJI ]
+  * Release 0.1-0sci9u2
+  * New upstream version 0.2
+  * New upstream version 0.2
+
+  [ Kwame Amedodji ]
+
+ -- Kwame Amedodji <kwame-externe.amedodji@edf.fr>  Fri, 05 Jul 2019 15:28:57 +0200
+
+collectd-opaerror-plugin (0.1-0sci9u2) scibian9; urgency=medium
+
+  [ Kwame AMEDODJI ]
+  * Release 0.1-0sci9u1
+
+  [ Kwame Amedodji ]
+
+ -- Kwame Amedodji <kwame-externe.amedodji@edf.fr>  Thu, 04 Jul 2019 15:32:34 +0200
+
+collectd-opaerror-plugin (0.1-0sci9u1) scibian9; urgency=medium
+
+  [ Kwame AMEDODJI ]
+  * Release 0.1-0sci9u1
+
+ -- Kwame Amedodji <kwame-externe.amedodji@edf.fr>  Thu, 04 Jul 2019 14:34:51 +0200
